@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - Primary meta tags
+  -->
+  <title>オーシャン・レストラン - 美味しい海の恵み</title>
+  <meta name="title" content="オーシャン・レストラン - 美味しい海の恵み">
+  <meta name="description" content="海は、海の恵みを最大限に活かした料理をお届けする日本のレストランです。新鮮な食材、素晴らしい雰囲気、心を込めたおもてなしを体験してください。">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - Google Font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+  <!-- 
+    - Custom CSS link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - Preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+
+  <style>
+    /* Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      /* Dark overlay */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .modal-content {
+      background: linear-gradient(135deg, #fefefe, #f8f8f8);
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 450px;
+      width: 90%;
+      font-family: 'Noto Sans JP', sans-serif;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .modal-content h2 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #f5a623;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .modal-content p {
+      font-size: 1.1rem;
+      color: #555;
+      margin: 0.8rem 0;
+    }
+
+    .modal-content a {
+      color: #f5a623;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .modal-content a:hover {
+      color: #ff6347;
+      text-decoration: underline;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      color: #666;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close-btn:hover {
+      color: #ff4d4d;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Show modal when active */
+    .modal.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+
+<body id="top">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">オーシャン・レストラン</p>
+  </div>
+
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>本日の特別オファー！</h2>
+      <p>🎉 本日19:00〜21:00まで、全てのデザートが<span style="color: #ff6347;">50％オフ</p>
+      <p>📞 ご予約は <a href="#">+81-31234-5678</a> までお電話ください。</p>
+    </div>
+  </div>
+
+
+
+  <!-- 
+    - #TOP BAR
+  -->
+
+  <div class="topbar">
+    <div class="container">
+
+      <address class="topbar-item">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span">
+          東京都港区海岸1-2-3, 日本
+        </span>
+      </address>
+
+      <div class="separator"></div>
+
+      <div class="topbar-item item-2">
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span">毎日 : 午前8時 ～ 午後10時</span>
+      </div>
+
+      <a href="tel:+81-31234-5678" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span">+81-31234-5678</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:booking@ocean-restaurant.jp" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <span class="span">booking@ocean-restaurant.jp</span>
+      </a>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+
+      オーシャン・レストラン
+      <nav class="navbar" data-navbar>
+
+        <button class="close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.svg" width="160" height="50" alt="オーシャン・レストラン - Home">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+              <span class="span">ホーム</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#menu" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">メニュー</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">私たちについて</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">シェフ紹介</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">お問い合わせ</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">ご来店をお待ちしております</p>
+
+          <address class="body-4">
+            東京都港区海岸1-2-3, 日本
+          </address>
+
+          <p class="body-4 navbar-text">営業時間: 午前11時 ～ 午後10時</p>
+
+          <a href="mailto:booking@ocean-restaurant.jp" class="body-4 sidebar-link">booking@ocean-restaurant.jp</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">ご予約はこちら</p>
+
+          <a href="tel:+81-31234-5678" class="body-1 contact-number hover-underline">
+            +81-31234-5678
+          </a>
+        </div>
+
+      </nav>
+
+      <a href="#reservation" class="btn btn-secondary">
+        <span class="text text-1">テーブルを予約する</span>
+        <span class="text text-2" aria-hidden="true">テーブルを予約する</span>
+      </a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero text-center" aria-label="home" id="home">
+
+        <ul class="hero-slider" data-hero-slider>
+
+          <li class="slider-item active" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">伝統と衛生</p>
+
+            <h1 class="display-1 hero-title slider-reveal">
+              美味しい料理への愛を込めて
+            </h1>
+
+            <a href="#menu" class="btn btn-primary slider-reveal">
+              <span class="text text-1">メニューを見る</span>
+              <span class="text text-2" aria-hidden="true">メニューを見る</span>
+            </a>
+
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">素晴らしい体験</p>
+
+            <h1 class="display-1 hero-title slider-reveal">
+              季節にインスパイアされた<br>
+              フレーバー
+            </h1>
+
+            <a href="#menu" class="btn btn-primary slider-reveal">
+              <span class="text text-1">メニューを見る</span>
+              <span class="text text-2" aria-hidden="true">メニューを見る</span>
+            </a>
+
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+
+            <p class="label-2 section-subtitle slider-reveal">驚くべき美味しさ</p>
+
+            <h1 class="display-1 hero-title slider-reveal">
+              すべてのフレーバーには<br>
+              ストーリーがある
+            </h1>
+
+            <a href="#menu" class="btn btn-primary slider-reveal">
+              <span class="text text-1">メニューを見る</span>
+              <span class="text text-2" aria-hidden="true">メニューを見る</span>
+            </a>
+
+          </li>
+
+        </ul>
+
+        <button class="slider-btn prev" aria-label="前のスライドへ" data-prev-btn>
+          <ion-icon name="chevron-back"></ion-icon>
+        </button>
+
+        <button class="slider-btn next" aria-label="次のスライドへ" data-next-btn>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+
+        <a href="#reservation" class="hero-btn has-after">
+          <img src="./assets/images/hero-icon.png" width="48" height="48" alt="予約アイコン">
+          <span class="label-2 text-center span">テーブルを予約する</span>
+        </a>
+
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section about text-center" aria-labelledby="about-label" id="about">
+        <div class="container">
+          <div class="about-content">
+            <p class="label-2 section-subtitle" id="about-label">私たちの物語</p>
+            <h2 class="headline-1 section-title">すべての味が語るストーリー</h2>
+            <p class="section-text">
+              私たちの料理は、地元の漁師から仕入れた新鮮な魚介類を使用し、伝統的な和食の技術とモダンなアプローチを融合させています。
+              味覚を通して、日本の四季と文化を体験していただける場所です。
+            </p>
+            <div class="contact-label">電話でのご予約</div>
+            <a href="tel:+81-31234-5678" class="body-1 contact-number hover-underline">+81-31234-5678</a>
+            <a href="#" class="btn btn-primary">
+              <span class="text text-1">もっと見る</span>
+              <span class="text text-2" aria-hidden="true">もっと見る</span>
+            </a>
+          </div>
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.jpg" width="570" height="570" loading="lazy" alt="海の風景" class="w-100"
+              data-parallax-item data-parallax-speed="1">
+            <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
+              <img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt="料理の一例"
+                class="w-100">
+            </div>
+            <div class="abs-img abs-img-2 has-before">
+              <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
+            </div>
+          </figure>
+          <img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
+        </div>
+      </section>
+
+
+      <!-- 
+        - #SPECIAL DISH
+      -->
+
+      <section class="special-dish text-center" aria-labelledby="dish-label">
+
+        <div class="special-dish-banner">
+          <img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
+            class="img-cover">
+        </div>
+
+        <div class="special-dish-content bg-black-10">
+          <div class="container">
+
+            <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
+
+            <p class="section-subtitle label-2">特別料理</p>
+
+            <h2 class="headline-1 section-title">ロブスター・トルテリーニ</h2>
+
+            <p class="section-text">
+              新鮮なロブスターをふんだんに使用した贅沢な一品です。伝統的な技法で作られたパスタとともに、究極の味をお楽しみください。
+            </p>
+
+            <div class="wrapper">
+              <del class="del body-3">¥5,400</del>
+
+              <span class="span body-1">¥2,700</span>
+            </div>
+
+            <a href="#menu" class="btn btn-primary">
+              <span class="text text-1">すべてのメニューを見る</span>
+              <span class="text text-2" aria-hidden="true">すべてのメニューを見る</span>
+            </a>
+
+          </div>
+        </div>
+
+        <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
+
+        <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
+
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #MENU
+      -->
+
+      <section class="section menu" aria-label="menu-label" id="menu">
+        <div class="container">
+
+          <p class="section-subtitle text-center label-2">特選メニュー</p>
+
+          <h2 class="headline-1 section-title text-center">美味しいメニュー</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="ギリシャ風サラダ"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">ギリシャ風サラダ</a>
+                    </h3>
+
+                    <span class="badge label-1">季節限定</span>
+
+                    <span class="span title-2">¥3,400</span>
+                  </div>
+
+                  <p class="card-text label-1">
+                    トマト、ピーマン、きゅうり、玉ねぎ、オリーブ、フェタチーズを使用したさわやかなサラダです。
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Repeat similar translations for other dishes -->
+
+          </ul>
+
+          <a href="#" class="btn btn-primary">
+            <span class="text text-1">すべてのメニューを見る</span>
+            <span class="text text-2" aria-hidden="true">すべてのメニューを見る</span>
+          </a>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #TESTIMONIALS
+      -->
+
+      <section class="section testi text-center has-bg-image"
+        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        <div class="container">
+
+          <div class="quote">”</div>
+
+          <p class="headline-2 testi-text">
+            先日招待していただいた素晴らしいディナーに感謝しています。料理は驚くほど美味しかったです。
+          </p>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+          <div class="profile">
+            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="サム・ジョンソン"
+              class="img">
+
+            <p class="label-2 profile-name">サム・ジョンソン</p>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #RESERVATION
+      -->
+
+      <section class="reservation">
+        <div class="container">
+
+          <div class="form reservation-form bg-black-10">
+
+            <form action="" class="form-left">
+
+              <h2 class="headline-1 text-center">オンライン予約</h2>
+
+              <p class="form-text text-center">
+                ご予約は <a href="tel:+88123123456" class="link">+88-123-123456</a> または下記フォームからどうぞ。
+              </p>
+
+              <div class="input-wrapper">
+                <input type="text" name="name" placeholder="お名前" autocomplete="off" class="input-field">
+
+                <input type="tel" name="phone" placeholder="電話番号" autocomplete="off" class="input-field">
+              </div>
+
+              <div class="input-wrapper">
+
+                <div class="icon-wrapper">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                  <select name="person" class="input-field">
+                    <option value="1-person">1名様</option>
+                    <option value="2-person">2名様</option>
+                    <option value="3-person">3名様</option>
+                    <option value="4-person">4名様</option>
+                    <option value="5-person">5名様</option>
+                    <option value="6-person">6名様</option>
+                    <option value="7-person">7名様</option>
+                  </select>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="icon-wrapper">
+                  <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+                  <input type="date" name="reservation-date" class="input-field">
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="icon-wrapper">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                  <select name="reservation-time" class="input-field">
+                    <option value="08:00am">08:00</option>
+                    <option value="09:00am">09:00</option>
+                    <option value="10:00am">10:00</option>
+                    <option value="11:00am">11:00</option>
+                    <option value="12:00pm">12:00</option>
+                    <option value="01:00pm">13:00</option>
+                    <option value="02:00pm">14:00</option>
+                    <option value="03:00pm">15:00</option>
+                    <option value="04:00pm">16:00</option>
+                    <option value="05:00pm">17:00</option>
+                    <option value="06:00pm">18:00</option>
+                    <option value="07:00pm">19:00</option>
+                    <option value="08:00pm">20:00</option>
+                    <option value="09:00pm">21:00</option>
+                    <option value="10:00pm">22:00</option>
+                  </select>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+
+              </div>
+
+              <textarea name="message" placeholder="ご要望・メッセージ" autocomplete="off" class="input-field"></textarea>
+
+              <button type="submit" class="btn btn-secondary">
+                <span class="text text-1">席を予約する</span>
+                <span class="text text-2" aria-hidden="true">席を予約する</span>
+              </button>
+
+            </form>
+
+            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+
+              <h2 class="headline-1 text-center">お問い合わせ</h2>
+
+              <p class="contact-label">ご予約・お問い合わせ</p>
+
+              <a href="tel:+81-31234-5678" class="body-1 contact-number hover-underline">+81-31234-5678</a>
+
+              <div class="separator"></div>
+
+              <p class="contact-label">所在地</p>
+
+              <address class="body-4">
+                東京都渋谷区海街 123-45, 日本
+              </address>
+
+              <p class="contact-label">ランチタイム</p>
+
+              <p class="body-4">
+                月曜日～日曜日 <br>
+                11:00 - 14:30
+              </p>
+
+              <p class="contact-label">ディナータイム</p>
+
+              <p class="body-4">
+                月曜日～日曜日 <br>
+                17:00 - 22:00
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="section features text-center" aria-label="features">
+        <div class="container">
+
+          <p class="section-subtitle label-2">なぜ私たちを選ぶのか</p>
+
+          <h2 class="headline-1 section-title">私たちの強み</h2>
+
+          <ul class="grid-list">
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">衛生的で安心な食事</h3>
+
+                <p class="label-1 card-text">私たちは厳しい衛生基準を守り、お客様に安心して楽しんでいただける料理を提供します。</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">新鮮な環境</h3>
+
+                <p class="label-1 card-text">海の風を感じる落ち着いた空間で、リラックスしながらお食事をお楽しみください。</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">熟練のシェフ</h3>
+
+                <p class="label-1 card-text">経験豊富なシェフが、季節の食材を使用した最高の料理をお届けします。</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">イベント・パーティー対応</h3>
+
+                <p class="label-1 card-text">特別な日をより思い出深いものに。イベントやパーティープランもご用意しています。</p>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
+            class="shape shape-1">
+
+          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
+            class="shape shape-2">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #EVENT
+      -->
+
+      <section class="section event bg-black-10" aria-label="event">
+        <div class="container">
+
+          <p class="section-subtitle label-2 text-center">最新情報</p>
+
+          <h2 class="section-title headline-1 text-center">今後のイベント</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
+                    alt="目でも味わいたくなるほどの美味しさ。" class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-15">2022年9月15日</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">グルメ体験</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    目でも味わいたくなるほどの美味しさ。
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy" alt="健康を意識した美味しいお食事。"
+                    class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-08">2022年9月8日</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">ヘルシーフード</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    健康を意識した美味しいお食事。
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy" alt="新しいレシピで驚きの発見。"
+                    class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-03">2022年9月3日</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">レシピ</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    新しいレシピで驚きの発見。
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn btn-primary">
+            <span class="text text-1">ブログを見る</span>
+            <span class="text text-2" aria-hidden="true">ブログを見る</span>
+          </a>
+
+        </div>
+      </section>
+
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer section has-bg-image text-center"
+    style="background-image: url('./assets/images/footer-bg.jpg')">
+    <div class="container">
+
+      <div class="footer-top grid-list">
+
+        <div class="footer-brand has-before has-after">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="オーシャン・レストラン - ホーム">
+          </a>
+
+          <address class="body-4">
+            東京都渋谷区海街 123-45, 日本
+          </address>
+
+          <a href="#" class="body-4 contact-link">reservation@ocean.com</a>
+
+          <a href="#" class="body-4 contact-link">予約電話番号: +81-31234-5678</a>
+
+          <p class="body-4">
+            営業時間: 午前9時 - 午後1時
+          </p>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+          <p class="title-1">ニュース＆特典情報をお届け</p>
+
+          <p class="label-1">
+            メール購読で <span class="span">25% オフ！</span>
+          </p>
+
+          <form action="" class="input-wrapper">
+            <div class="icon-wrapper">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <input type="email" name="email_address" placeholder="メールアドレス" autocomplete="off" class="input-field">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">購読する</span>
+              <span class="text text-2" aria-hidden="true">購読する</span>
+            </button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">ホーム</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">メニュー</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">私たちについて</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">シェフ紹介</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">お問い合わせ</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">YouTube</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Googleマップ</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2022 オーシャン・レストラン. 全著作権所有
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script>
+    // Modal Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('modal');
+
+      // Show modal on page load
+      setTimeout(() => modal.classList.add('active'), 500); // Add a slight delay for animation
+
+      // Close modal when clicking anywhere
+      modal.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
+    });
+
+
+  </script>
+
+</body>
+
+</html>
