@@ -696,7 +696,6 @@ body.nav-active {
 }
 
 .header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -759,7 +758,6 @@ body.nav-active {
 }
 
 .navbar {
-  position: fixed;
   background-color: var(--smoky-black-1);
   top: 0;
   left: -360px;
@@ -879,7 +877,6 @@ body.nav-active {
 }
 
 .overlay {
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -1647,7 +1644,6 @@ textarea.input-field {
 \*-----------------------------------*/
 
 .back-top-btn {
-  position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: var(--gold-crayola);
@@ -1726,7 +1722,6 @@ textarea.input-field {
 
   .topbar {
     display: block;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
